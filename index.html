@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Streaming Demo</title>
+  </head>
+  <body>
+    <img id="stream" src="http://192.168.43.247/1280x1024.jpg" alt="Streaming Image">
+    <script>
+      // Change the image source every 100ms
+      setInterval(function() {
+        document.getElementById('stream').src = "http://192.168.43.247/1280x1024.jpg?" + new Date().getTime();
+      }, 100);
+    </script>
+  </body>
+</html>
